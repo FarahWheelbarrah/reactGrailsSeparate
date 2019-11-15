@@ -1,16 +1,14 @@
-package demo
+package backend
 
 import grails.rest.Resource
 
 @Resource(uri = '/vehicle')
 class Vehicle {
     String name
-
     Make make
     Model model
 
     static belongsTo = [driver: Driver]
 
-    static constraints = {
-    }
+    static constraints = {}
 }

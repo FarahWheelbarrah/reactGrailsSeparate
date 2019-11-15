@@ -1,4 +1,4 @@
-package demo
+package backend
 
 import grails.rest.Resource
 
@@ -6,6 +6,5 @@ import grails.rest.Resource
 class Model {
     String name
 
-    static constraints = {
-    }
+    static constraints = {}
 }
