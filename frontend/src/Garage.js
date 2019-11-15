@@ -46,7 +46,7 @@ class Garage extends React.Component {
     }
 
     submitNewVehicle = (vehicle) => {
-        axios.post('/vehicle', vehicle)
+        axios.post('http://localhost:8080/', vehicle)
         .then(res => {
             const vehicles = this.state.vehicles;
             vehicles.push(res.data);
