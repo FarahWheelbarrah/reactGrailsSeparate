@@ -3,8 +3,6 @@ import axios from 'axios';
 import Vehicles from './Vehicles';
 import AddVehicleForm from "./AddVehicleForm";
 
-import 'whatwg-fetch';
-
 class Garage extends React.Component {
     state = {
             vehicles: [],
