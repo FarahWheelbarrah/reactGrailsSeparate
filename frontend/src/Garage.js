@@ -12,22 +12,22 @@ class Garage extends React.Component {
         }
     
     componentDidMount() {
-        this.makeGetRequest('vehicle', res => {
+        this.makeGetRequest('http://localhost:8080/', 'vehicle', res => {
             const vehicles = res.data;
             this.setState({vehicles});
         });
 
-        this.makeGetRequest('make', res => {
+        this.makeGetRequest('http://localhost:8080/', 'make', res => {
             const makes = res.data;
             this.setState({makes});
         });
 
-        this.makeGetRequest('model', res => {
+        this.makeGetRequest('http://localhost:8080/', 'model', res => {
             const models = res.data;
             this.setState({models});
         });
 
-        this.makeGetRequest('driver', res => {
+        this.makeGetRequest('http://localhost:8080/', 'driver', res => {
             const drivers = res.data;
             this.setState({drivers});
         });
@@ -72,8 +72,8 @@ class Garage extends React.Component {
         });
     }
 
-    makeGetRequest = (dataName, actionToComplete) => {
-        axios.get('/' + dataName)
+    makeGetRequest = (url, dataName, actionToComplete) => {
+        axios.get(url + dataName)
         .then(actionToComplete)
         .catch(err => console.log('Error retrieving '+ dataName + 's: ' + err));
     }

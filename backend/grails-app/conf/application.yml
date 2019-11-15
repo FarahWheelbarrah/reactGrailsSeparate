@@ -86,6 +86,9 @@ grails:
                 scriptlet: html
                 taglib: none
                 staticparts: none
+    cors:
+        enabled: true
+
 management:
     endpoints:
         jmx:
